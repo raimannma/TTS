@@ -32,9 +32,6 @@ from Cython.Build import cythonize
 from setuptools import Extension, find_packages, setup
 
 python_version = sys.version.split()[0]
-if Version(python_version) < Version("3.9") or Version(python_version) >= Version("3.12"):
-    raise RuntimeError("TTS requires python >= 3.9 and < 3.12 " "but your Python version is {}".format(sys.version))
-
 
 cwd = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(cwd, "TTS", "VERSION")) as fin:
